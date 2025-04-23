@@ -1,0 +1,85 @@
+
+\section{Related Work}
+\label{sec:related}
+% About 1.5-2 pages
+
+\begin{table*}[!t]
+    \begin{center}
+    \caption{Comparison of proposed parking occupancy detection solutions.}
+    \vspace{-1mm}
+    \label{table:relatedwork}
+    \begin{tabular}{| p{3.5cm}| c| c | c | c | p{6cm}|}
+    \hline  
+    Method/References & Coverage & Low-cost? & Non-Intrusive? & Accuracy & Other Issues and Drawbacks \\ \hline \hline
+    IR Sensors\newline\cite{HumairaNishat2024IRSB, DHEEVEN2024100953} & Per-spot & \xmark & \xmark & High & Susceptible to weather and heat from sources other than vehicles \\ \hline
+    Ultrasonic Sensors\newline\cite{Zhang2022ParkingDU} & Per-spot & \xmark & \xmark & High & Potential inaccuracies with soft or angled surfaces, as well as susceptibility to acoustic noise\\ \hline
+    Ground Wi-Fi Sensors\newline\cite{9881350} & Per-spot & \cmark & \xmark & High & Highly impractical due to the box placed on the ground at each parking spot \\ \hline
+    LoRa \& RFID Sensors\newline\cite{8938183} & Per-spot & \cmark & \xmark & High & Potential for false positives, limitations in diverse environments and challenges with robustness \\ \hline
+    Vision Based\newline\cite{Agrawal2020MultiAnglePD},\cite{Bohush2019ExtractionOI},\cite{Coleiro2020CarPD},\cite{HurstTarrab2020RobustPB},\cite{Patel2020FasterRB},\cite{MartnNieto2019AutomaticVP},\cite{Pannerselvam2021AdaptivePS},\cite{Patel2020CarDB},\cite{Vtek2017ADW},\cite{Wang2023GlobalPR},\cite{Zhang2020ImageBasedAF} & Multi-spot & \cmark & \xmark & Medium & Requires high computational resources, potential privacy issues, susceptible to weather and low light  \\ \hline
+    Ultra-wide-band Radar\newline\cite{Ninnemann2022MultipathAssistedRS} & Multi-spot & \xmark & \cmark & Medium & Study does not provide experimental results for cases where multiple vehicles are present  \\ \hline
+    Crowd-sourcing\newline\cite{Bock2020SmartPU},\cite{7517783},\cite{10.1145/2632048.2632098} & Multi-spot & \cmark & \cmark & Low & Effectiveness heavily depends on user participation \\ \hline
+    WiParkFind\cite{8422973} & Multi-spot & \cmark & \cmark & Low & Only provides vacancy count rather than pinpointing individual spots \\ \hline
+    \textbf{Our work} & Multi-spot & \cmark & \cmark & High &  \\ \hline
+    \end{tabular}
+    \end{center}
+    \vspace{-5mm}
+    \end{table*}
+
+In this section, we provide an overview of related studies in the literature. There are two main approaches for parking space accounting. While some aim to detect the presence of vehicles in individual parking spots, others focus on estimating the total number of available parking spaces. In order to achieve the former, dedicated sensors are typically deployed in each parking spot, such as magnetic or ultrasonic sensors. Studies in this area have focused on improving the accuracy of these sensors, reducing their cost, or enhancing their energy efficiency. For the latter, the method is usually based on counting the number of vehicles entering and leaving the parking lot. Since this approach is less accurate than the former, as it does not provide information about the specific locations of empty parking spaces, while being much cheaper, most of the studies in this area focus on making the individual sensor technologies more cost-effective. In order to achieve this, some studies have proposed using different sensor technologies to detect the presence of vehicles in parking spaces. Others have explored the feasibility of using fewer sensors and mitigating the need for dedicated sensors for each parking spot. For this reason, we will first review the studies that focus on individual sensor technologies for parking space accounting, and then we will review the studies that focus on using fewer sensors that can be used for multiple parking spots.
+
+\subsection{Per-Spot Sensor Occupancy Detection}
+
+Most of the current solutions for parking occupancy detection rely on deploying dedicated sensors in each parking spot. For example, magnetic sensors are widely used to detect the presence of vehicles in parking spaces. These sensors can be embedded in the pavement and are capable of detecting changes in the magnetic field caused by the presence of a vehicle. They are relatively inexpensive and easy to install, but they may not work well in all weather conditions or with certain types of vehicles. There are also ultrasonic sensors that use sound waves to detect the presence of vehicles. These sensors can provide accurate occupancy information, but they are more expensive and require more maintenance than magnetic sensors. 
+
+Some studies have explored other sensor technologies for individual parking spaces. Some studies propose using infrared sensors to detect the presence of vehicles\cite{HumairaNishat2024IRSB},\cite{DHEEVEN2024100953}. These sensors can be used to detect the heat emitted by vehicles, making them suitable for outdoor environments. However, they may not work well in all weather conditions and can be affected by other heat sources in the vicinity. 
+
+One study has proposed using a combination of different sensor technologies\cite{Zhang2022ParkingDU}. This approach combines magnetic sensors with ultrasonic sensors to improve the accuracy of parking occupancy detection and increase the battery life of the sensors.
+
+Another approach is to use wireless signals to detect the occupancy of parking spots. For example, a study has proposed using Wi-Fi signals to detect the presence of vehicles in parking spaces\cite{9881350}. The sensor used in the study can provide accurate occupancy information and is relatively inexpensive. However, this approach requires a box to be installed on the ground of each parking spot, which can be intrusive and costly. There are studies that also focus on other wireless technologies, such as LoRa and RFID\cite{8938183}, still requiring dedicated sensors for each parking spot.
+
+
+\subsection{Multi-Spot Occupancy Detection}
+
+With the improvements in artificial intelligence and machine learning, some studies have proposed using vision-based systems for parking occupancy detection. These systems can cover multiple parking spots\cite{7895130}, process the images captured by the cameras, and detect the presence of vehicles in individual parking spaces. Most of these studies rely on deep learning algorithms to analyze the images and detect the presence of vehicles\cite{Agrawal2020MultiAnglePD},\cite{Bohush2019ExtractionOI},\cite{Coleiro2020CarPD},\cite{HurstTarrab2020RobustPB},\cite{Patel2020FasterRB},\cite{MartnNieto2019AutomaticVP},\cite{Pannerselvam2021AdaptivePS},\cite{Patel2020CarDB},\cite{Vtek2017ADW},\cite{Wang2023GlobalPR}, while others use traditional computer vision techniques\cite{Zhang2020ImageBasedAF}. In addition to the high cost and computational requirements of these systems, they also have some environmental limitations. For example, they may not work well in low-light conditions or in different weather conditions if the parking lot is not covered.
+
+One study experimentally evaluated the performance of a ulta wide-band (UWB) radar system for parking occupancy detection\cite{Ninnemann2022MultipathAssistedRS}. The study found that the UWB radar system can accurately detect the presence of vehicles in parking spaces. However, it failed to provide results for cases where multiple vehicles are present.
+
+There have also been studies for parking spot accounting that do not require a phsical detection of vehicles. Rather, they rely on crowd-sourced data to estimate the number of available parking spaces\cite{Bock2020SmartPU},\cite{7517783},\cite{10.1145/2632048.2632098}. These proposed solutions heavily rely on user participation and thus tend to be less accurate than the other methods. 
+
+
+The closest work to our study is WiParkFind, which was briefly introduced earlier. This system uses off-the-shelf Wi-Fi devices to monitor parking occupancy by analyzing channel state information (CSI) data using machine learning\cite{8422973}. They used Intel 5300 Wi-Fi cards connected to two laptops to collect CSI data. The experiments were conducted in a parking lot with 10 spots. The researchers were able to predict the number of available parking slots with an accuracy of 78.2\%. However, WiParkFind focuses on estimating the total number of available parking slots without pinpointing their exact locations, which our study aims to address.
+
+% \textit{\blue{You are expected to cover at least 10-15 studies that are published in the last 5-7 years.}}
+
+% \textit{\blue{You can divide all studies covered into categories if needed and create subsections for each category.}}
+
+% \textit{\blue{Consider creating a table to make the review of the studies easy for the reviewers. You can create columns with different features and discuss which works have that feature or component studied.
+% You can also add your work in the last row and indicate that you will target all those features etc.}}
+
+
+
+
+
+
+% \newpage % remove it
+
+% % below is just example, remove it
+% When UAVs are considered for data collection from ground IoT devices~\cite{wei2022uav}, 
+
+% \textit{\blue{Talk about each paper in detail. Table~\ref{table:relatedwork} should only include key points as a summary and comparison.}}
+
+% \newpage % remove it
+% % this is used to adjust current looking without content
+
+% \textit{\blue{Refer to Table~\ref{table:relatedwork} as you go through this section as well.}}
+
+% \newpage % remove it
+
+% \textit{\blue{Features in the table can be defined by your based on your application and problem. For example, if you are working on UAV networks, some features can be (i) Multiple UAVs (considered or not) (ii) Realistic mobility (iii) Energy constraint (considered or not) etc.}}
+
+
+
+
+
+
+
