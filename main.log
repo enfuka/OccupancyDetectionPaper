@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.7)  22 APR 2025 20:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.7)  27 APR 2025 18:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -690,6 +690,9 @@ Underfull \hbox (badness 1460) in paragraph at lines 18--18
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [1{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
@@ -698,11 +701,49 @@ Underfull \hbox (badness 1460) in paragraph at lines 18--18
 
 
 
-[2]) (main.bbl
+[2]) (3-system.tex
+<Figures/system_design.png, id=16, 712.91344pt x 1747.27782pt>
+File: Figures/system_design.png Graphic file (type png)
+<use Figures/system_design.png>
+Package pdftex.def Info: Figures/system_design.png  used on input line 14.
+(pdftex.def)             Requested size: 227.62204pt x 557.86058pt.
 
 
 
-[3])
+
+[3 <./Figures/system_design.png>]
+<Figures/layout.png, id=22, 334.632pt x 254.04pt>
+File: Figures/layout.png Graphic file (type png)
+<use Figures/layout.png>
+Package pdftex.def Info: Figures/layout.png  used on input line 27.
+(pdftex.def)             Requested size: 227.62204pt x 172.80304pt.
+
+
+) (4-experimental_setup.tex
+
+[4 <./Figures/layout.png>]
+<Figures/experimental_setup.png, id=37, 519.906pt x 274.407pt>
+File: Figures/experimental_setup.png Graphic file (type png)
+<use Figures/experimental_setup.png>
+Package pdftex.def Info: Figures/experimental_setup.png  used on input line 13.
+(pdftex.def)             Requested size: 227.62204pt x 120.14069pt.
+) (5-experimental_results.tex
+
+<Figures/confusion_matrix.png, id=38, 474.8139pt x 450.9648pt>
+File: Figures/confusion_matrix.png Graphic file (type png)
+<use Figures/confusion_matrix.png>
+Package pdftex.def Info: Figures/confusion_matrix.png  used on input line 12.
+(pdftex.def)             Requested size: 227.62204pt x 216.1854pt.
+) (6-conclusion.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[5 <./Figures/experimental_setup.png> <./Figures/confusion_matrix.png>] (main.bbl
+
+
+
+[6])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -718,58 +759,40 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-[leftcolumn badness]: 1000000 on 18.0pt
-[rightcolumn badness]: 1000000 on 18.0pt
-[leftcolumn badness]: 1000000 on 18.0pt
-[rightcolumn badness]: 1000000 on 18.0pt
-[leftcolumn badness]: 1000000 on 0.07999pt
-[rightcolumn badness]: 1000000 on 0.07999pt
-[leftcolumn badness]: 1000000 on 0.07999pt
-[rightcolumn badness]: 1000000 on 0.07999pt
-[leftcolumn badness]: 1000000 on 0.07999pt
-[rightcolumn badness]: 1000000 on 0.07999pt
-[leftcolumn badness]: 1000000 on 0.07999pt
-[rightcolumn badness]: 1000000 on 0.07999pt
-[leftcolumn badness]: 1000000 on 0.07999pt
-[rightcolumn badness]: 1000000 on 0.07999pt
-[leftcolumn badness]: 1000000 on 0.07999pt
-[rightcolumn badness]: 1000000 on 0.07999pt
-[leftcolumn badness]: 1000000 on 0.07999pt
-[rightcolumn badness]: 1000000 on 0.07999pt
-[leftcolumn badness]: 1000000 on 0.07999pt
-[rightcolumn badness]: 1000000 on 0.07999pt
-[leftcolumn badness]: 1000000 on 0.07999pt
-[rightcolumn badness]: 1000000 on 0.07999pt
+[leftcolumn badness]: 1000000 on 18.07999pt
+[rightcolumn badness]: 1000000 on 18.07999pt
+[leftcolumn badness]: 1000000 on 18.07999pt
+[rightcolumn badness]: 1000000 on 18.07999pt
 - LAST -
-Extra skip:18.0pt
-Left:39.0pt/1.73193pt
-Right:21.0pt/1.73193pt
-Split: 39.5pt
-Output:39.5pt
+Extra skip:0.0pt
+Left:57.0pt/1.73193pt
+Right:57.0pt/1.73193pt
+Split: 57.5pt
+Output:57.5pt
 Pageshrink: 0.0pt
 Pagestretch: 0.0pt
 @colht:672.0pt
-FLUSHEND [output]: 39.5pt
-FLUSHEND [leftcolumn badness]: 10000
-FUSHEND [rightcolumn badness]: 10000
-[4] (main.aux)
+FLUSHEND [output]: 57.5pt
+FLUSHEND [leftcolumn badness]: 100
+FUSHEND [rightcolumn badness]: 100
+[7] (main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 27810 strings out of 473898
- 694406 string characters out of 5726480
+ 27894 strings out of 473898
+ 696704 string characters out of 5726480
  1956960 words of memory out of 5000000
- 50199 multiletter control sequences out of 15000+600000
- 594788 words of font info for 105 fonts, out of 8000000 for 9000
+ 50270 multiletter control sequences out of 15000+600000
+ 596949 words of font info for 111 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 99i,10n,107p,1558b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (4 pages, 87753 bytes).
+ 99i,10n,107p,1610b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on main.pdf (7 pages, 5949349 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
